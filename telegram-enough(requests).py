@@ -12,10 +12,10 @@ else:
         f.write(r)
 from sms import SendSms
 
-token = environ.get('token')
+token = environ.get('6316745031:AAGhPVHVz35HLLxTBgrarntgfS1jAcWCeUQ')
 
 def getUpdate():
-    url = 'https://api.telegram.org/bot{}/getUpdates'.format(token)
+    url = 'https://api.telegram.org/bot6316745031:AAGhPVHVz35HLLxTBgrarntgfS1jAcWCeUQ/getUpdates'.format(token)
     r = requests.get(url)
     x = 0
     while 1 :
