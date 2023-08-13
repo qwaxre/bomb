@@ -4,10 +4,10 @@ from sms import SendSms
 from time import sleep
 from os import environ
 
-TOKEN = environ.get('TOKEN')
+TOKEN = environ.get('6316745031:AAGhPVHVz35HLLxTBgrarntgfS1jAcWCeUQ')
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text(f"Merhaba\!\nBirilerini rahatsız etmek istiyorsan doğru yere geldin\.\n*_/help_* yazarak komutları görebilirsin\.\nİyi eğlenceler\!\n\n[_Kaynak Kodu_](https://github.com/qwaxre/SMSBOMBER-V8)\n[_İnstagram_](https://instagram.com/wrx.qwaxre)", parse_mode='MarkdownV2')
+    await update.message.reply_text(f"Merhaba\!\nBen Rolex Hack 2 Denem botuyum birilerini rahatsız etmek istiyorsan doğru yere geldin\.\n*_/help_* yazarak komutları görebilirsin\.\nİyi eğlenceler\!\n\n[_Kaynak Kodu_](https://github.com/qwaxre/SMSBOMBER-V8)\n[_İnstagram_](https://instagram.com/wrx.qwaxre)", parse_mode='MarkdownV2')
 
 async def sms(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if len(update.message.text.split(" ")) == 2 and update.message.text.split(" ")[0] == "/sms":
@@ -20,7 +20,7 @@ async def sms(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 await update.message.reply_text("Config dosyası ayarlanmamış\!\nConfig dosyasını ayarlamak için *_/config_* komutunu kullanın\.", parse_mode="MarkdownV2")
                 return 
             telno = update.message.text.split(" ")[1]
-            await update.message.reply_document("https://media.tenor.com/HMEXEddytUUAAAAC/polat-alemdar.gif", f"*{adet} adet SMS Gönderiliyor \-\-\> {telno}*", parse_mode="MarkdownV2")
+            await update.message.reply_document("canos.mp4", f"*{adet} adet SMS Gönderiliyor \-\-\> {telno}*", parse_mode="MarkdownV2")
             sms = SendSms(telno, "")
             while sms.adet < adet:
                 for attribute in dir(SendSms):
